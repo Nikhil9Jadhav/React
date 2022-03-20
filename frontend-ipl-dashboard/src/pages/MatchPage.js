@@ -6,7 +6,6 @@ export const MatchPage = () => {
   const { teamName, year } = useParams()
 
   useEffect(() => {
-    const teamName = "Delhi Capitals"
     const fetchMatchesByYear = async () => {
       const response = await fetch(`http://localhost:8080/team/${teamName}/matches?year=${year}`)
       const matchesData = response.json()
